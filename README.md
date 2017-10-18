@@ -1,5 +1,5 @@
 # vados
-Website for [skye discord bot](http://puu.sh/xWUZ6/42528d4aa1.png) done in React
+Website for [skye discord bot](https://vados.herokuapp.com) done in React
 
 ## Getting Started
 If for some reason you want to host this website yourself, first clone the repository and install nodejs. 
