@@ -13,8 +13,8 @@ const Page = styled.div`
 `;
 
 const H1 = styled.h1`
-  font-size: 10em;
-  font-weight: 300;
+  font-size: 15em;
+  font-weight: 200;
   margin-bottom: 0;
 `;
 

@@ -5,16 +5,15 @@ const Page = styled.div`
   background-color: #2a2d32;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;
   justify-content: center;
   align-items: center;
   color: #f0f0f0;
 `;
 
 const Container = styled.div`
-	height: 100vh;
-	width: 70vw;
-	min-width: 1200px;
+	width: 1000px;
 `;
 
 const Content = styled.div`
@@ -22,6 +21,7 @@ const Content = styled.div`
 
 const ContentContainer = styled.div`
 	display: flex;
+	flex: 2;
 `;
 
 const ImgContainer = styled.div`
@@ -32,6 +32,7 @@ const ImgContainer = styled.div`
 
 const Description = styled.div`
 	padding: 2em 1em;
+	flex: 2;
 `;
 
 const H2 = styled.h2`
@@ -73,6 +74,24 @@ export default class Features extends React.Component {
 			      	<p>Easily retrieve information such as summary, score, episodes and status of different shows and books within Discord.</p>
 			      </Description>
 		      	<div><ImgContainer><img src={require('../assets/search.gif')}/></ImgContainer></div>
+			      </ContentContainer>
+	      	</Content>
+	      	<Content>
+		      	<H2>Fun commands</H2>
+		      	<hr/>
+		      	<ContentContainer>
+			      	<Description>
+				      	<H3><strike>Semi intelligent</strike> speech module</H3>
+				      	<p>Talk to skye when you're bored.</p>
+				      </Description>
+			      	<ImgContainer><img src={require('../assets/talk.gif')}/></ImgContainer>
+			      </ContentContainer>
+		      	<ContentContainer>
+		      	  <ImgContainer><img src={require('../assets/reactions.gif')}/></ImgContainer>
+			      	<Description>
+				      	<H3>Reactions</H3>
+				      	<p>Send different anime reaction gifs and images to the chat for everyone to see.</p>
+				      </Description>
 			      </ContentContainer>
 	      	</Content>
       	</Container>
