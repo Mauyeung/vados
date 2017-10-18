@@ -5,15 +5,16 @@ const Page = styled.div`
   background-color: #2a2d32;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  height 100%;
+  width: 100%;
   justify-content: center;
   align-items: center;
   color: #f0f0f0;
 `;
 
 const H1 = styled.h1`
-  font-size: 15em;
+  font-size: 15vw;
   font-weight: 200;
   margin-bottom: 0;
 `;
@@ -25,6 +26,9 @@ const H3 = styled.h3`
 const Buttoncontainer = styled.div`
   display: flex;
   flex-direction: row;
+  @media only screen and (max-width: 1100px) {
+    flex-direction column;
+  }
 `;
 
 const Button = styled.button`
@@ -40,6 +44,7 @@ const Button = styled.button`
     color: white;
   }
   outline:none;
+  cursor: pointer;
 `;
 
 const A = styled.a`

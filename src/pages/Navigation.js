@@ -2,36 +2,54 @@ import React from "react";
 import {Link} from "react-router-dom";
 import styled from 'styled-components';
 
-const Header = styled.header`
+const Nav = styled.nav`
+  background-color: #7289da;
+  width: 100%;
   padding: 0;
   margin: 0;
   font-size: 1.3em;
+  font-weight: 100;
   color: '#f0f0f0;
 `;
 
-const Nav = styled.nav`
-  background: #7289da;
+const Container = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 `;
 
+const Container2 = styled.div`
+  width: 1100px;
+  display: flex;
+`;
+
 const Logodiv = styled.div`
-  flex: 2;
+  flex: 1;
+  padding: 0 0.25em;
+  display: flex;
+  align-items: center;
 `;
 
 const Ul = styled.ul`
-  padding: 0 2em;
   display: flex;
+  @media only screen and (max-width: 1100px) {
+    display: none;
+  }
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Li = styled.li`
   list-style-type: none;
   padding: 0 0.5em;
+  margin: 0;
 `;
 
 const StyledLink = styled(Link)`
   padding: 0;
+  margin: 0;
   color: #f0f0f0;
   text-decoration: none;
   &:hover {
@@ -41,22 +59,26 @@ const StyledLink = styled(Link)`
 
 const H2 = styled.h2`
   font-weight: 100;
-  margin: 0 2em;
+  margin: 0;
+  padding: 0;
 `;
 
 export default class Navigation extends React.Component {
+
   render() {
     return (
-    <Header>
       <Nav>
+        <Container>
+        <Container2>
         <Logodiv><StyledLink to="/"><H2>skye | スカイ</H2></StyledLink></Logodiv>
         <Ul>
           <Li><StyledLink to="features">Features</StyledLink></Li>
           <Li><StyledLink to="commands">Commands</StyledLink></Li>
           <Li><StyledLink to="about">About</StyledLink></Li>
         </Ul>
+        </Container2>
+        </Container>
       </Nav>
-    </Header>
     );
   }
 }

@@ -6,33 +6,67 @@ const Page = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  min-width: 100vw;
-  justify-content: center;
+  min-width: 100%;
   align-items: center;
   color: #f0f0f0;
+  margin: 0;
+  padding: 0;
 `;
 
 const Container = styled.div`
-	width: 1000px;
+	max-width: 1100px;
 `;
 
 const Content = styled.div`
 `;
 
-const ContentContainer = styled.div`
-	display: flex;
-	flex: 2;
+const ContentTitle = styled.div`
+	@media only screen and (max-width: 1100px) {
+		padding: 0 1em;
+	}
 `;
 
-const ImgContainer = styled.div`
-  border-radius: 0.7em;
-  overflow: hidden;
+const ContentContainer = styled.div`
+	display: flex;
+	padding: 0 1em;
+	justify-content: center;
+	@media only screen and (max-width: 1100px) {
+		flex-direction: column;
+	}
+`;
+
+const ImgContainer = styled.img`
+  border-radius: 0.5em;
   margin: 2em 1em;
+	@media only screen and (max-width: 1100px) {
+		max-width: 100%;
+		margin: 0 1em;
+		display: block;
+	}
+`;
+
+const ImgContainerSmall = styled.img`
+  border-radius: 0.5em;
+  margin: 0 1em;
+  max-width: 330px;
+	@media only screen and (max-width: 1100px) {
+		max-width: 100%;
+		display: block;
+	}
 `;
 
 const Description = styled.div`
 	padding: 2em 1em;
-	flex: 2;
+	flex: 1;
+`;
+
+const SmallContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	flex-basis: 0;
+	@media only screen and (max-width: 1100px) {
+		flex-basis: auto;
+	}
 `;
 
 const H2 = styled.h2`
@@ -53,10 +87,12 @@ export default class Features extends React.Component {
     	<Page>
     		<Container>
     			<Content>
+    			<ContentTitle>
 		      	<H2>High Quality Music</H2>
 		      	<hr/>
+		      </ContentTitle>
 		      	<ContentContainer>
-		      	<div><ImgContainer><img src={require('../assets/music.gif')}/></ImgContainer></div>
+		      	<ImgContainer src={require('../assets/music.gif')}/>
 		      	<Description>
 			      	<H3>Easy music searching</H3>
 			      	<p>Play music by simply searching for a song and selecting from a list of results.</p>
@@ -66,33 +102,35 @@ export default class Features extends React.Component {
 			      </ContentContainer>
 	      	</Content>
 	      	<Content>
-		      	<H2>Quick search</H2>
+	      	<ContentTitle>
+		      	<H2>Fun commands and utilities</H2>
 		      	<hr/>
+		      </ContentTitle>
+
 		      	<ContentContainer>
-		      	<Description>
-			      	<H3>Search for anime and manga</H3>
-			      	<p>Easily retrieve information such as summary, score, episodes and status of different shows and books within Discord.</p>
-			      </Description>
-		      	<div><ImgContainer><img src={require('../assets/search.gif')}/></ImgContainer></div>
-			      </ContentContainer>
-	      	</Content>
-	      	<Content>
-		      	<H2>Fun commands</H2>
-		      	<hr/>
-		      	<ContentContainer>
+		      	<SmallContainer>
 			      	<Description>
 				      	<H3><strike>Semi intelligent</strike> speech module</H3>
 				      	<p>Talk to skye when you're bored.</p>
 				      </Description>
-			      	<ImgContainer><img src={require('../assets/talk.gif')}/></ImgContainer>
-			      </ContentContainer>
-		      	<ContentContainer>
-		      	  <ImgContainer><img src={require('../assets/reactions.gif')}/></ImgContainer>
+				      <ImgContainerSmall src={require('../assets/talk.gif')}/>
+				   </SmallContainer>
+				   <SmallContainer>
 			      	<Description>
 				      	<H3>Reactions</H3>
 				      	<p>Send different anime reaction gifs and images to the chat for everyone to see.</p>
 				      </Description>
+				      <ImgContainerSmall src={require('../assets/reactions.png')}/>
+				   </SmallContainer>
+				   <SmallContainer>
+		      	<Description>
+			      	<H3>Search for anime and manga</H3>
+			      	<p>Easily retrieve information such as summary, score, episodes and status of different shows and books within Discord.</p>
+			      </Description>
+		      	<ImgContainerSmall src={require('../assets/search.png')}/>
+				   </SmallContainer>
 			      </ContentContainer>
+
 	      	</Content>
       	</Container>
       </Page>
