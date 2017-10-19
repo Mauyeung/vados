@@ -27,21 +27,23 @@ const Content = styled.div`
 `;
 
 export default class Anime extends React.Component {
-  render() {
-    return (
-      <div>
-      <Container>
-      	<H2>Play</H2>
-      	<hr/>
-   		<H3>Description</H3>
-   		<p>Plays music</p>
-   		<H3>Usage</H3>
-   		<p>Usage stuff</p>
-      	<Content>
-      	<H3example>Example</H3example>
-      	</Content>
-      	</Container>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div>
+				<Container>
+					<H2>Anime</H2>
+					<hr/>
+					<H3>Description</H3>
+					<p>Search anilist for an anime and return the results in the text channel.</p>
+					<H3>Usage</H3>
+					<p>~anime [anime search query]</p>
+					<Content>
+						<H3example>Example</H3example>
+						<H3example>I don't really know what to put here right now.... no example yet!</H3example>
+						<H3example>(╯°□°)╯︵ ┻━┻</H3example>
+					</Content>
+				</Container>
+			</div>
+		);
+	}
 }
