@@ -12,13 +12,13 @@ const Nav = styled.nav`
   color: '#f0f0f0;
 `;
 
-const Container = styled.div`
+const Centerer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-const Container2 = styled.div`
+const Container = styled.div`
   width: 1100px;
   display: flex;
 `;
@@ -68,16 +68,16 @@ export default class Navigation extends React.Component {
   render() {
     return (
       <Nav>
+        <Centerer>
         <Container>
-        <Container2>
         <Logodiv><StyledLink to="/"><H2>skye | スカイ</H2></StyledLink></Logodiv>
         <Ul>
-          <Li><StyledLink to="features">Features</StyledLink></Li>
-          <Li><StyledLink to="commands">Commands</StyledLink></Li>
-          <Li><StyledLink to="about">About</StyledLink></Li>
+          <Li><StyledLink to="/features">Features</StyledLink></Li>
+          <Li><StyledLink to="/commands">Commands</StyledLink></Li>
+          <Li><StyledLink to="/about">About</StyledLink></Li>
         </Ul>
-        </Container2>
         </Container>
+        </Centerer>
       </Nav>
     );
   }

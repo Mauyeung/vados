@@ -76,13 +76,12 @@ const H2 = styled.h2`
 
 const H3 = styled.h3`
 	color: palevioletred;
-  font-weight: 400;
-  margin-top: 0;
+	font-weight: 400;
+	margin-top: 0;
 `;
 
 export default class Features extends React.Component {
   render() {
-    console.log("Support");
     return (
     	<Page>
     		<Container>
@@ -106,7 +105,6 @@ export default class Features extends React.Component {
 		      	<H2>Fun commands and utilities</H2>
 		      	<hr/>
 		      </ContentTitle>
-
 		      	<ContentContainer>
 		      	<SmallContainer>
 			      	<Description>
@@ -130,7 +128,6 @@ export default class Features extends React.Component {
 		      	<ImgContainerSmall src={require('../assets/search.png')}/>
 				   </SmallContainer>
 			      </ContentContainer>
-
 	      	</Content>
       	</Container>
       </Page>
