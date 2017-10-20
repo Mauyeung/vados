@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import styled from 'styled-components';
 
 const Nav = styled.nav`
@@ -45,9 +45,13 @@ const Li = styled.li`
 	list-style-type: none;
 	padding: 0 0.5em;
 	margin: 0;
+	display: table;
 `;
 
-const StyledLink = styled(Link)`
+const activeClassName = 'active';
+const StyledLink = styled(NavLink).attrs({
+	activeClassName
+})`
 	padding: 0;
 	margin: 0;
 	color: #f0f0f0;
@@ -55,6 +59,11 @@ const StyledLink = styled(Link)`
 	&:hover {
 		color: white;
 	}
+	&.${activeClassName} {
+		font-weight: 400;
+		color: white;
+	}
+	display: table-cell;
 `;
 
 const H2 = styled.h2`

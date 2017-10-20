@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import {Route} from "react-router";
 
 import Default from "./commands/default";
@@ -52,24 +52,33 @@ const Nav = styled.nav`
 `;
 
 const Ul = styled.ul`
-	padding: 0 1em;
+	padding: 0;
 	margin: 0;
 `;
 
 const Li = styled.li`
 	list-style-type: none;
-	padding: 0.5em 0;
 	margin: 0;
+	padding: 0;
+	display: table;
 `;
 
-const StyledLink = styled(Link)`
-	padding: 0;
+const activeClassName = 'active';
+const StyledLink = styled(NavLink).attrs({
+	activeClassName
+})`
+
 	margin: 0;
+	padding: 0.5em;
 	color: #f0f0f0;
 	text-decoration: none;
 	&:hover {
 		color: white;
 	}
+	&.${activeClassName} {
+		border-left: 1px solid palevioletred;
+	}
+	display: table-cell;
 `;
 
 const H2 = styled.h2`
@@ -83,6 +92,24 @@ const H3 = styled.h3`
 	margin: 0;
 	padding; 0;
 `;
+
+class Tab extends React.Component {
+
+	_toggleActive(){
+
+	}
+
+  render() {
+    return (
+    <StyledLink 
+      onClick={this._toggleActive}
+      to={this.props.to}
+    >
+    	{this.props.children}
+    </StyledLink>
+    );
+  }
+}
 
 export default class Commands extends React.Component {
   render() {

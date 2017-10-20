@@ -68,7 +68,7 @@ export default class Home extends React.Component {
 		return (
 			<Page>
 				<H1>skye</H1>
-				<H3>General purpose discord bot</H3>
+				<H3>A general purpose discord bot</H3>
 				<Buttoncontainer>
 					<Button onClick={this._invite}>Invite</Button>
 					<Button onClick={this._github}>Github</Button>
