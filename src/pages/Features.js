@@ -41,7 +41,7 @@ const ImgContainer = styled.img`
 	margin: 2em 1em;
 	@media only screen and (max-width: 1100px) {
 		max-width: 100%;
-		margin: auto;
+		margin: 0 1em;
 	}
 `;
 
@@ -57,6 +57,9 @@ const ImgContainerSmall = styled.img`
 const Description = styled.div`
 	padding: 2em 1em;
 	flex: 1;
+	@media only screen and (max-width: 1100px) {
+		padding: 1em;
+	}
 `;
 
 const SmallContainer = styled.div`
