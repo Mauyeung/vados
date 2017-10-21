@@ -30,8 +30,9 @@ const ContentContainer = styled.div`
 	display: flex;
 	padding: 0 1em;
 	justify-content: center;
+	max-width: 100%;
 	@media only screen and (max-width: 1100px) {
-		flex-direction: column;
+		flex-direction: ${props => props.reverse ? 'column-reverse' : 'column'};
 	}
 `;
 
@@ -40,18 +41,16 @@ const ImgContainer = styled.img`
 	margin: 2em 1em;
 	@media only screen and (max-width: 1100px) {
 		max-width: 100%;
-		margin: 0 1em;
-		display: block;
+		margin: auto;
 	}
 `;
 
 const ImgContainerSmall = styled.img`
-  border-radius: 0.5em;
-  margin: 0 1em;
-  max-width: 330px;
+	border-radius: 0.5em;
+	margin: 0 1em;
+	max-width: 330px;
 	@media only screen and (max-width: 1100px) {
 		max-width: 100%;
-		display: block;
 	}
 `;
 
@@ -90,7 +89,7 @@ export default class Features extends React.Component {
 						<H2>High Quality Music</H2>
 						<hr/>
 					</ContentTitle>
-					<ContentContainer>
+					<ContentContainer reverse>
 						<ImgContainer src={require('../assets/music.gif')}/>
 						<Description>
 							<H3>Easy music searching</H3>
@@ -102,7 +101,7 @@ export default class Features extends React.Component {
 				</Content>
 				<Content>
 					<ContentTitle>
-						<H2>Fun commands and utilities</H2>
+						<H2 position='right'>Fun commands and utilities</H2>
 						<hr/>
 					</ContentTitle>
 					<ContentContainer>

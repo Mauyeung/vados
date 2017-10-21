@@ -38,6 +38,9 @@ const Container = styled.div`
 	width: 1100px;
 	display: flex;
 	flex-direction: row;
+	@media only screen and (max-width: 768px) {
+		flex-direction: column-reverse;
+	}
 `;
 
 const Content = styled.div`
@@ -76,7 +79,7 @@ const StyledLink = styled(NavLink).attrs({
 		color: white;
 	}
 	&.${activeClassName} {
-		border-left: 1px solid palevioletred;
+		border-left: 2px solid palevioletred;
 	}
 	display: table-cell;
 `;

@@ -21,11 +21,14 @@ const Centerer = styled.div`
 const Container = styled.div`
 	width: 1100px;
 	display: flex;
+	@media only screen and (max-width: 1100px) {
+		flex-direction: column;
+	}
 `;
 
 const Logodiv = styled.div`
 	flex: 1;
-	padding: 0 0.25em;
+	padding: 0 0.5em;
 	display: flex;
 	align-items: center;
 `;
@@ -33,7 +36,9 @@ const Logodiv = styled.div`
 const Ul = styled.ul`
 	display: flex;
 	@media only screen and (max-width: 1100px) {
-		display: none;
+		//display: none;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 	padding: 0;
 	margin: 0;
