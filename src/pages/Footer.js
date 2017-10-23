@@ -9,17 +9,22 @@ const StyledFooter = styled.footer`
    color: #f0f0f0;
    padding: 1.25em;
    align-items: center;
+	@media only screen and (max-width: 425px) {
+		flex-direction: column-reverse;
+	}
 `;
 
 const Div = styled.div`
 	position: absolute;
 	left: 0;
 	padding: 0 1em;
+	@media only screen and (max-width: 425px) {
+		position: static;
+	}
 `;
 
 const Ul = styled.ul`
-  @media only screen and (max-width: 1100px) {
-    //display: none;
+  @media only screen and (max-width: 425px) {
     align-items: flex-start;
   }
   flex: 1;
@@ -40,15 +45,6 @@ const H3 = styled.h3`
   color: palevioletred;
   font-weight: 400;
   margin-top: 0;
-`;
-
-const ImgContainer = styled.img`
-  border-radius: 0.5em;
-  margin: 2em 1em;
-  @media only screen and (max-width: 1100px) {
-    max-width: 100%;
-    margin: 0 1em;
-  }
 `;
 
 const Path = styled.path`
