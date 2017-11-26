@@ -55,7 +55,6 @@ const A = styled.a`
 `;
 
 export default class Home extends React.Component {
-
 	_invite() {
 		window.location.href='https://discord.now.sh/364830291954499597?p1610087633';
 	}

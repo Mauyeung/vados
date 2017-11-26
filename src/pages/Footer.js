@@ -1,8 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
 
-import InstagramSVG from '../assets/logo-svgs/instagram.svg';
-
 const StyledFooter = styled.footer`
    background-color: #191919;
    display: flex;
