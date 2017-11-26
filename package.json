@@ -23,7 +23,6 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "express": "^4.16.2",
-    "history": "^1.17.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
